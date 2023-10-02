@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BMI_App</string>
+    <string name="calcBMI">CALCULATE</string>
+    <string name="fName">FirstName</string>
+    <string name="lName">LastName</string>
+    <string name="middleI">Middle Initial</string>
+    <string name="genderM">Male</string>
+    <string name="genderF">Female</string>
+    <string name="height">Height in CM</string>
+    <string name="weight">Weight in KG</string>
+</resources>
