@@ -13,47 +13,90 @@
         android:id="@+id/resultcard1"
         android:layout_width="376dp"
         android:layout_height="377dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="25dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/result1"
-                android:layout_width="0dp"
+                android:id="@+id/genderTxt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="84dp"
-                android:gravity="center"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/skullbones"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/resultBmi"
+                android:id="@+id/nameTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/genderTxt"
+                app:layout_constraintStart_toStartOf="@+id/genderTxt"
+                app:layout_constraintTop_toBottomOf="@+id/genderTxt" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:text="YOUR BMI RESULT"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/nameTxt"
+                app:layout_constraintStart_toStartOf="@+id/nameTxt"
+                app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
+
+            <TextView
+                android:id="@+id/bmiTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/skullbones"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/bmiTagTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/skullbones"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/result1"
-                app:layout_constraintTop_toBottomOf="@+id/result1" />
+                app:layout_constraintEnd_toEndOf="@+id/bmiTxt"
+                app:layout_constraintStart_toStartOf="@+id/bmiTxt" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/resultcard2"
-        android:layout_width="387dp"
-        android:layout_height="251dp"
+        android:layout_width="388dp"
+        android:layout_height="233dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="@+id/resultcard1"
         app:layout_constraintTop_toBottomOf="@+id/resultcard1"
-        app:layout_constraintVertical_bias="0.323" >
+        app:layout_constraintVertical_bias="0.323">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +119,9 @@
                 android:id="@+id/underweightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="Less than 18.5"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
@@ -86,7 +131,9 @@
                 android:id="@+id/hlthyWeightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="Greater than or equal to 18.5 and less than 25"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
@@ -96,17 +143,31 @@
                 android:id="@+id/overweightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="Greater than or equal to 25 and less than 30"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/obeseTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="Greater than or equal to 30"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/goBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="AGAIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/resultcard2"
+        app:layout_constraintStart_toStartOf="@+id/resultcard2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
