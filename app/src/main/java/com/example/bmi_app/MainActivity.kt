@@ -82,12 +82,4 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-        private fun calcBMI(height: Float, weight: Float): Float {
-            val heightInMeters = height / 100 // Convert height from cm to meters
-            return if (heightInMeters > 0) {
-                weight / (heightInMeters * heightInMeters)
-            } else {
-                0.0f
-            }
-        }
 
