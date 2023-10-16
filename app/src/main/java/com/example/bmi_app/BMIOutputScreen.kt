@@ -20,7 +20,7 @@ class BMIOutputScreen : AppCompatActivity() {
         val lastname = intent.getStringExtra("lastName")
         val middleInitial = intent.getStringExtra("middleInitial")
         val gender = intent.getStringExtra("gender")
-        val bmi = intent.getFloatExtra("bmi", 0.0f) // Extract BMI as a float, defaulting to 0.0f if not found
+        val bmi = intent.getFloatExtra("bmi", 0.0f) 
 
         val fullName = "$firstname $middleInitial $lastname"
         val formattedName = fullName.split(" ").joinToString(" ") { it.capitalize() }
@@ -31,22 +31,22 @@ class BMIOutputScreen : AppCompatActivity() {
 
         val bmiStatus: String = when {
             bmi < 18.5 -> {
-                binding.bmiTagTxt.setTextColor(Color.RED) // Change color to red
+                binding.bmiTagTxt.setTextColor(Color.RED)
                 binding.underweightTxt.setBackgroundColor(Color.RED)
                 "Underweight"
             }
             bmi < 25 -> {
-                binding.bmiTagTxt.setTextColor(Color.GREEN) // Change color to green
+                binding.bmiTagTxt.setTextColor(Color.GREEN) 
                 binding.hlthyWeightTxt.setBackgroundColor(Color.GREEN)
                 "Healthy Weight"
             }
             bmi < 30 -> {
-                binding.bmiTagTxt.setTextColor(Color.RED) // Change color to red
+                binding.bmiTagTxt.setTextColor(Color.RED) 
                 binding.overweightTxt.setBackgroundColor(Color.RED)
                 "Overweight"
             }
             else -> {
-                binding.bmiTagTxt.setTextColor(Color.RED) // Change color to red
+                binding.bmiTagTxt.setTextColor(Color.RED)
                 binding.obeseTxt.setBackgroundColor(Color.RED)
                 "Obese"
             }
