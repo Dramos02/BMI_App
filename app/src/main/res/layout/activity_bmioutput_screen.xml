@@ -30,9 +30,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:fontFamily="@font/skullbones"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
-                android:textSize="20sp"
+                android:textSize="34sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -41,12 +43,15 @@
                 android:id="@+id/nameTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-medium"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
-                android:textSize="20sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/genderTxt"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/genderTxt"
                 app:layout_constraintTop_toBottomOf="@+id/genderTxt" />
 
@@ -54,7 +59,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:text="YOUR BMI RESULT"
@@ -68,9 +73,10 @@
                 android:id="@+id/bmiTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/skullbones"
-                android:textSize="20sp"
+                android:gravity="center"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
@@ -88,6 +94,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/bmiTxt"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/bmiTxt" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,14 +120,16 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/underweightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Less than 18.5"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
@@ -131,8 +140,10 @@
                 android:id="@+id/hlthyWeightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Greater than or equal to 18.5 and less than 25"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
@@ -143,8 +154,10 @@
                 android:id="@+id/overweightTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Greater than or equal to 25 and less than 30"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
@@ -155,8 +168,10 @@
                 android:id="@+id/obeseTxt"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Greater than or equal to 30"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
